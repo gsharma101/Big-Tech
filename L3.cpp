@@ -35,6 +35,30 @@ const find TwoSum = function(nums,target){
 
     return null;
 }
+
+! Time Complexity = O(n2) - Quadratic
+? Space Complexity = O(1) - linear
+
+TODO Optimized Solution using (Hash Map)
+
+const find TwoSum = function(nums, target)
+{
+    const numsMap = {};
+    for(let p = 0; p<nums.length; p++)
+    {
+        const currentMapVal = numsMap[nums[p]];
+        if(currentMapVal >= 0)
+        {
+            return [currentMapVal,p];
+        } else {
+            const numberToFind = target - nums[p];
+            numsMap[numberTOFind] = p;
+        }
+    }
+
+    return null;
+}
+
 */
 
 int main(){
