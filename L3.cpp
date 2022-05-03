@@ -19,7 +19,8 @@ vector <int> twoSum(vector<int>& nums, int target){
 }
 
 /* 
-Alternative 
+!Alternative 
+
 const find TwoSum = function(nums,target){
     for(let p1 = 0; p1< nums.length; p++)
     {
@@ -37,16 +38,17 @@ const find TwoSum = function(nums,target){
 }
 
 ! Time Complexity = O(n2) - Quadratic
-? Space Complexity = O(1) - linear
+? Space Complexity = O(1) - Constant
 
 TODO Optimized Solution using (Hash Map)
 
-const find TwoSum = function(nums, target)
+const findTwoSum = function(nums, target)
 {
     const numsMap = {};
     for(let p = 0; p<nums.length; p++)
     {
         const currentMapVal = numsMap[nums[p]];
+        
         if(currentMapVal >= 0)
         {
             return [currentMapVal,p];
@@ -57,6 +59,9 @@ const find TwoSum = function(nums, target)
     }
 
     return null;
+
+    ! Time Complexity = O(n) - Linear
+    ? Space Complexity = O(n) - Linear
 }
 
 */
